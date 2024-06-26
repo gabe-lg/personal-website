@@ -96,7 +96,6 @@ body {
   color: rgb(255, 215, 220)
 }
 
-
 .jumbotron .highlight {
   border-radius: 25px;
   padding: 0px 10px;
@@ -119,11 +118,50 @@ body {
   }
 }
 
+/* TILES */
+#home-tiles>div {
+  height: 200px;
+}
+
+#home-tiles>div>a {
+  text-decoration: none;
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  color: white;
+  font-size: xx-large;
+}
+
+#home-tiles>div>a:hover {
+  width: 200px;
+  height: 200px;
+}
+
+#home-tiles>div>a>span {
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: rgba(0, 180, 180, 0.8);
+}
+
+#projects-tile {
+  background-image: url(img/profile-pic.jpg);
+}
+
+#music-tile {
+  background-image: url(img/profile-pic.jpg);
+}
+
+#travels-tile {
+  background-image: url(img/profile-pic.jpg);
+}
+
 /** FOOTER */
 footer {
   background-color: gray;
   padding: 10px;
-
   color: white;
   font-family: Calibri, sans-serif;
 }
