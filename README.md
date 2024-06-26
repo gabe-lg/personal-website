@@ -1,2 +1,2 @@
-# html-test
+# personal-website
 First html repository

@@ -1,0 +1,96 @@
+body {
+  background-color: pink;
+  color: blueviolet;
+  font-family: "Caveat", cursive;
+  font-size: 150%;
+}
+
+/** HEADER */
+/* PFP */
+#header-nav {
+  background-color: rgba(255, 166, 0, 0.4);
+}
+
+/* xs only */
+@media (max-width: 575.98px) {
+  .logo-img {
+    border-radius: 50%;
+    width: 50px;
+    margin: 10px 20px 10px 10px;
+  }
+}
+
+/* sm and up */
+@media (min-width: 576px) {
+  .logo-img {
+    border-radius: 50%;
+    width: 80px;
+    margin: 10px 30px 10px 0;
+  }
+}
+
+/* TITLE */
+.navbar-brand {
+  font-family: "Playwrite US Modern", cursive;
+}
+
+/* xs only */
+@media (max-width: 575.98px) {
+  .navbar-brand h1 {
+    font-size: 1.25rem;
+  }
+}
+
+.navbar-brand h1 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: rgb(75, 200, 255);
+}
+
+/* SOCIALS */
+.logo-soc {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 3px;
+}
+
+.logo-soc li {
+  float: left;
+}
+
+.logo-soc img {
+  width: 17px;
+  margin: 5px;
+}
+
+/* MENU */
+/* md and up */
+@media (min-width: 768px) {
+  .menu-no-flex {
+    flex: none;
+  }
+}
+
+.nav-link.active {
+  font-weight: 500;
+}
+
+/* sm and down */
+@media (max-width: 767.98px) {
+  #navbarSupportedContent a {
+    font-size: 0.8em;
+  }
+}
+
+/** FOOTER */
+footer {
+  background-color: gray;
+  padding: 10px;
+
+  color: white;
+  font-family: Calibri, sans-serif;
+}
