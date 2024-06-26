@@ -2,110 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    $(function () { $("head").load("head.html") });
+    $(function () { $("header").load("header.html") });
+    $(function () { $("footer").load("footer.html") });
+  </script>
+
   <title>Home</title>
-  <link rel="icon" type="image/x-icon" href="img/icons/favicon.png">
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern&display=swap">
 </head>
 
 <body>
-  <header>
-    <nav id="header-nav" class="navbar navbar-expand-md navbar-light">
-      <div class="container">
-        <!--PFP-->
-        <a href="/">
-          <img class="logo-img float-start" src="img/profile-pic.jpg"
-            alt="Profile pic">
-        </a>
-
-        <!--TITLE-->
-        <div class="navbar-brand me-auto">
-          <a href="/">
-            <h1>Gabriel Leung</h1>
-          </a>
-
-          <!--SOCIALS-->
-          <span>
-            <ul class="logo-soc">
-              <li>
-                <a href="https://instagram.com/hey.its.gabee"><img
-                    src="img/icons/instagram.png" alt="Instagram logo"></a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/gabriel-lg"><img
-                    src="img/icons/linkedin.png" alt="Linkedin logo"></a>
-              </li>
-              <li>
-                <a href="https://github.com/gabe-lg"><img
-                    src="img/icons/github.png" alt="Github logo"></a>
-              </li>
-              <li>
-                <a href="mailto:mail@gabriel-lg.com"><img
-                    src="img/icons/email.png" alt="Email logo"></a>
-              </li>
-            </ul>
-          </span>
-        </div>
-
-        <!--MENU-->
-        <!--collapsible button-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!--menu-->
-        <div class="menu-no-flex collapse navbar-collapse"
-          id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-  </header>
-
-  <!--CONTENT-->
-  <!--
-      <div id="main-content" class="container">
-        <p style="min-height: 500px;">
-          Welcome to my personal website!
-        </p>
-      </div>
-  -->
+  <header></header>
 
   <div class="jumbotron">
     <div class="container">
@@ -160,28 +69,7 @@
     </div>
   </div>
 
-  <footer id="footer">
-    <!--SEARCH BAR-->
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search"
-        aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-
-    <div>
-      <ul>
-        <li><a href="credits.html">Credits</a></li>
-      </ul>
-    </div>
-    &copy; 2024 Gabriel Leung
-  </footer>
-
-  <script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <footer></footer>
 </body>
 
 </html>
