@@ -86,6 +86,32 @@ body {
   }
 }
 
+/** CONTENT */
+/* JUMBOTRON */
+.jumbotron {
+  background: url(img/jumbotron.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: rgb(255, 215, 220)
+}
+
+
+.jumbotron .highlight {
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: rgb(0, 180, 180);
+}
+
+.jumbotron h1 {
+  padding-top: 20vh;
+  color: rgb(128, 50, 128);
+}
+
+.jumbotron h1>.highlight {
+  background-color: rgb(255, 215, 220);
+}
+
 /** FOOTER */
 footer {
   background-color: gray;
