@@ -112,6 +112,13 @@ body {
   background-color: rgb(255, 215, 220);
 }
 
+/* xs only */
+@media (max-width: 575.98px) {
+  .jumbotron p {
+    font-size: 5vw;
+  }
+}
+
 /** FOOTER */
 footer {
   background-color: gray;
