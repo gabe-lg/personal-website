@@ -52,19 +52,25 @@ body {
 }
 
 /* SOCIALS */
-.logo-soc {
+#logo-tiles {
+  height: 36.7px;
+  width: 120px;
+  margin-left: 5px;
+}
+
+#logo-soc {
   list-style-type: none;
   margin: 0;
   padding-left: 3px;
 }
 
-.logo-soc li {
-  float: left;
-}
-
-.logo-soc img {
+#logo-soc img {
   width: 17px;
   margin: 5px;
+}
+
+#logo-soc img:hover {
+  width: 25px;
 }
 
 /* MENU */
