@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    var title = "Desktop background";
+    $(function () { $("head").load("/head.html") });
+    $(function () { $("#weather").load("/_weather.html") });
+  </script>
+</head>
+
+<body id="projects-bg-default">
+  <!-- INITIAL SCREEN -->
+  <div class="container fs-inv"></div>
+
+  <!-- FULLSCREEN -->
+
+  <div class="bg-img fs-vs">
+    <div class="container">
+      <div style="padding-top: 10vh;"></div>
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div id="bg-time"></div>
+        </div>
+        <div class="col-4">
+          <div id="weather"></div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
