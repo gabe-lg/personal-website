@@ -5,6 +5,14 @@ body {
   font-size: 150%;
 }
 
+/** FOOTER */
+footer {
+  background-color: gray;
+  padding: 10px;
+  color: white;
+  font-family: Calibri, sans-serif;
+}
+
 @media (display-mode: fullscreen) {
   .fs-inv {
     display: none;
@@ -174,14 +182,6 @@ body {
 
 #travels-tile {
   background-image: url(/img/profile-pic.jpg);
-}
-
-/** FOOTER */
-footer {
-  background-color: gray;
-  padding: 10px;
-  color: white;
-  font-family: Calibri, sans-serif;
 }
 
 /** ========== PROJECTS ========== */
