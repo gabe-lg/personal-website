@@ -5,10 +5,22 @@ body {
   font-size: 150%;
 }
 
+@media (display-mode: fullscreen) {
+  .fs-inv {
+    display: none;
+  }
+}
+
+@media not (display-mode: fullscreen) {
+  .fs-vs {
+    display: none;
+  }
+}
+
 /** HEADER */
 /* PFP */
 #header-nav {
-  background-color: rgba(255, 166, 0, 0.4);
+  background-color: rgb(255, 182, 122);
 }
 
 /* xs only */
@@ -170,4 +182,29 @@ footer {
   padding: 10px;
   color: white;
   font-family: Calibri, sans-serif;
+}
+
+/** ========== PROJECTS ========== */
+/** ===== BG-DEFAULT =====  */
+body#projects-bg-default {
+  background: url(img/profile-pic.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-img {
+  background: url(img/jumbotron.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#bg-time {
+  text-align: center;
+  text-shadow: rgb(255, 255, 255) 3px 3px 3px;
+  font-size: 80px;
+  padding-top: 10vh;
+}
+
+#weather {
+  height: 40vh;
 }
