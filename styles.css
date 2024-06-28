@@ -107,7 +107,7 @@ body {
 /** CONTENT */
 /* JUMBOTRON */
 .jumbotron {
-  background: url(img/jumbotron.jpg) center no-repeat;
+  background: url(/img/jumbotron.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -165,15 +165,15 @@ body {
 }
 
 #projects-tile {
-  background-image: url(img/profile-pic.jpg);
+  background-image: url(/img/profile-pic.jpg);
 }
 
 #music-tile {
-  background-image: url(img/profile-pic.jpg);
+  background-image: url(/img/profile-pic.jpg);
 }
 
 #travels-tile {
-  background-image: url(img/profile-pic.jpg);
+  background-image: url(/img/profile-pic.jpg);
 }
 
 /** FOOTER */
@@ -187,13 +187,13 @@ footer {
 /** ========== PROJECTS ========== */
 /** ===== BG-DEFAULT =====  */
 body#projects-bg-default {
-  background: url(img/profile-pic.jpg) center no-repeat;
+  background: url(/img/profile-pic.jpg) center no-repeat;
   background-size: cover;
   height: 100vh;
 }
 
 .bg-img {
-  background: url(img/jumbotron.jpg) center no-repeat;
+  background: url(/img/jumbotron.jpg) center no-repeat;
   background-size: cover;
   height: 100vh;
 }
