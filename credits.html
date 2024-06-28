@@ -2,36 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credits</title>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    var title = "Credits";
+    $(function () { $("head").load("/head.html") });
+    $(function () { $("header").load("/header.html") });
+    $(function () { $("footer").load("/footer.html") });
+  </script>
 </head>
 
 <body>
-  <ul>
-    <li>
-      UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
-    </li>
-    <li>
-      <a href="https://www.flaticon.com/free-icons/instagram"
-        title="instagram icons">Instagram icons created by edt.im
-        - Flaticon</a>
-    </li>
-    <li>
-      <a href="https://www.flaticon.com/free-icons/linkedin"
-        title="linkedin icons">Linkedin icons created by Freepik -
-        Flaticon</a>
-    </li>
-    <li>
-      <a href="https://www.flaticon.com/free-icons/github"
-        title="github icons">Github icons created by Pixel perfect -
-        Flaticon</a>
-    </li>
-    <li>
-      <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email
-        icons created by Freepik - Flaticon</a>
-    </li>
-  </ul>
+  <header></header>
+
+  <div class="container">
+    <ul>
+      <li>
+        UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+      </li>
+      <li>
+        <a href="https://www.flaticon.com/free-icons/instagram"
+          title="instagram icons">Instagram icons created by edt.im
+          - Flaticon</a>
+      </li>
+      <li>
+        <a href="https://www.flaticon.com/free-icons/linkedin"
+          title="linkedin icons">Linkedin icons created by Freepik -
+          Flaticon</a>
+      </li>
+      <li>
+        <a href="https://www.flaticon.com/free-icons/github"
+          title="github icons">Github icons created by Pixel perfect -
+          Flaticon</a>
+      </li>
+      <li>
+        <a href="https://www.flaticon.com/free-icons/email"
+          title="email icons">Email
+          icons created by Freepik - Flaticon</a>
+      </li>
+    </ul>
+  </div>
+
+  <footer></footer>
 </body>
 
 </html>
