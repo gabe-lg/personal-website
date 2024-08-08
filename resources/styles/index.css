@@ -1,0 +1,141 @@
+body {
+  background-color: pink;
+  color: blueviolet;
+  font-family: "Caveat", cursive;
+}
+
+/* JUMBOTRON */
+#jumbotron {
+  background: url(/resources/img/jumbotron.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: rgb(255, 215, 220);
+}
+
+#jumbotron .highlight {
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: rgb(0, 180, 180);
+}
+
+#jumbotron h1 {
+  color: rgb(128, 50, 128);
+  padding-top: 15vh;
+}
+
+#jumbotron h1 > .highlight {
+  background-color: rgb(255, 215, 220);
+  font-size: 115%;
+}
+
+#jumbotron p {
+  font-size: 105%;
+}
+
+#jumbotron p,
+#jumbotron h1 {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+#jumbotron #button a {
+  animation-duration: 3s;
+  animation-name: growshrink;
+  transition: all 0.5s ease-in-out;
+}
+
+#jumbotron #button a:hover {
+  transform: scale(1.5);
+  background-color: rgb(100, 255, 0);
+  border-color: rgb(100, 255, 0);
+  color: rgb(100, 0, 255);
+}
+
+/* xs only */
+@media (max-width: 575.98px) {
+  #jumbotron p {
+    font-size: 5vw;
+  }
+}
+
+/* TILES */
+#content,
+#content #cover {
+  background: url(/resources/img/spring-bg.gif) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+#content #cover {
+  height: 200vh;
+}
+
+#content.active div {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+#content #tiles {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+}
+
+#content #tiles .highlight {
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: rgb(255, 255, 0, 0.8);
+}
+
+#content #home-tiles > div {
+  height: 250px;
+}
+
+#content #home-tiles .tile-link {
+  text-decoration: none;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  color: white;
+  font-size: xx-large;
+  transition: all 0.5s ease-in-out;
+}
+
+/* xs only */
+@media (max-width: 575.98px) {
+  #content #home-tiles > div {
+    height: 175px;
+  }
+
+  #content #home-tiles .tile-link {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+#content #home-tiles .tile-link:hover {
+  transform: scale(1.2);
+}
+
+#content #home-tiles .highlight {
+  border-radius: 25px;
+  padding: 0px 10px;
+  background-color: rgba(0, 180, 180, 0.8);
+}
+
+#content #projects-tile {
+  background-image: url(/resources/img/profile-pic.jpg);
+}
+
+#content #music-tile {
+  background-image: url(/resources/img/profile-pic.jpg);
+}
+
+#content #travels-tile {
+  background-image: url(/resources/img/profile-pic.jpg);
+}

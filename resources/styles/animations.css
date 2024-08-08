@@ -1,0 +1,36 @@
+@keyframes slidein {
+  from {
+    translate: 0 100vw;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes growshrink {
+  25%,
+  75% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 150%;
+  }
+}
+
+@keyframes rotate10 {
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+}

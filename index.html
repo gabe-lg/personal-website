@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-    var title = "Home";
-    $(function () { $("head").load("/head.html") });
-    $(function () { $("header").load("/header.html") });
-    $(function () { $("footer").load("/footer.html") });
-  </script>
-</head>
-
-<body>
-  <header></header>
-
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-4"><span class="highlight">
-          Hi I'm Gabe,
-        </span></h1>
-      <p class="lead"><span class="highlight">
-          a freshman at Cornell University.
-        </span></p>
-      <div class="py-3"></div>
-      <p class="desc"><span class="highlight">
-          Currently studying CS, math, and music &mdash;</span><br><span
-          class="highlight">
-          and busy hiking &amp; traveling around the world!
-        </span></p>
-      <div class="py-4"></div>
-      <p class="lead pb-3">
-        <a class="btn btn-primary btn-lg" href="#content" role="button">
-          Let's get started
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <div id="content" class="container my-5">
-    <div>Learn more about me!</div>
-    <div id="home-tiles" class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12 d-flex align-items-center
-          justify-content-center mb-4">
-        <a id="projects-tile"
-          class="d-flex align-items-center justify-content-center"
-          href="projects">
-          <span>Projects</span>
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 d-flex align-items-center
-          justify-content-center mb-4">
-        <a id="music-tile"
-          class="d-flex align-items-center justify-content-center"
-          href="music">
-          <span>Music</span>
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-12 col-xs-12 d-flex align-items-center
-        justify-content-center mb-4">
-        <a id="travels-tile"
-          class="d-flex align-items-center justify-content-center"
-          href="travels">
-          <span>Travels</span>
-        </a>
+  <head></head>
+  <body ng-app="IndexApp" style="display: none">
+    <header></header>
+    <div id="jumbotron">
+      <div class="container">
+        <h1 class="display-4 pb-3">
+          <span class="highlight"> Hi I'm Gabe, </span>
+        </h1>
+        <p>
+          <span class="highlight"> a sophomore at Cornell University. </span>
+        </p>
+        <div class="py-3"></div>
+        <p>
+          <span class="highlight">
+            Currently studying CS, math, and music &mdash;</span
+          ><br /><span class="highlight">
+            and busy hiking &amp; traveling around the world!
+          </span>
+        </p>
+        <div class="py-4"></div>
+        <p id="button">
+          <a
+            class="btn btn-primary btn-lg"
+            onclick="jumbotronButton()"
+            role="button"
+          >
+            Let's get started
+          </a>
+        </p>
+        <div class="py-4"></div>
       </div>
     </div>
-  </div>
 
-  <footer></footer>
+    <div id="content">
+      <div id="cover"></div>
+      <div class="container" ng-controller="ContentController as cc">
+        <div id="tiles">
+          <div id="tiles-center">
+            <div class="display-6 my-4">
+              <span class="highlight">Learn more about me!&nbsp;</span>
+            </div>
+            <div id="home-tiles" class="row">
+              <div
+                class="col-md-4 
+                col-sm-{{ 6 + 6 * ($index === cc.tiles.length - 1) }} 
+                col-xs-12 d-flex align-items-center justify-content-center mb-4"
+                ng-repeat="tile in cc.tiles"
+              >
+                <a
+                  id="{{ tile.toLowerCase() }}-tile"
+                  class="tile-link d-flex align-items-center justify-content-center"
+                  href="{{ tile.toLowerCase() }}"
+                >
+                  <span class="highlight">{{ tile }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="/script.js"></script>
-</body>
+    <footer></footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+      const title = "Home";
+      const load = ["index"];
+    </script>
+    <script src="/resources/js/main.js"></script>
+    <script src="/resources/js/indexApp.js"></script>
+  </body>
 </html>
