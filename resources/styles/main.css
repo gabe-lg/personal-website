@@ -1,0 +1,169 @@
+body {
+  background-color: rgb(255, 232, 235);
+  font-family: "Mooli", sans-serif;
+  font-size: x-large;
+}
+
+/** FOOTER */
+footer {
+  background-color: gray;
+  padding: 10px;
+  color: white;
+  font-family: Calibri, sans-serif;
+  font-size: smaller;
+}
+
+@media (display-mode: fullscreen) {
+  .fs-inv {
+    display: none;
+  }
+}
+
+@media not (display-mode: fullscreen) {
+  .fs-vs {
+    display: none;
+  }
+}
+
+/** HEADER */
+header {
+  background-color: pink;
+  color: blueviolet;
+  font-family: "Caveat", cursive;
+}
+
+/* PFP */
+#header-nav {
+  background-color: rgb(255, 182, 122);
+}
+
+#logo-img {
+  transition: all 0.5s ease-in-out;
+}
+
+#logo-img:hover {
+  transform: scale(1.2);
+}
+
+/* xs only */
+@media (max-width: 575.98px) {
+  #logo-img {
+    border-radius: 50%;
+    width: 50px;
+    margin: 10px 20px 10px 10px;
+  }
+}
+
+/* sm and up */
+@media (min-width: 576px) {
+  #logo-img {
+    border-radius: 50%;
+    width: 80px;
+    margin: 10px 30px 10px 0;
+  }
+}
+
+/* TITLE */
+.navbar-brand {
+  font-family: "Playwrite US Modern", cursive;
+}
+.navbar-brand h1 {
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-brand h1:hover {
+  color: rgb(200, 0, 255);
+}
+
+/* xs only */
+@media (max-width: 575.98px) {
+  .navbar-brand h1 {
+    font-size: 1.25rem;
+  }
+}
+
+.navbar-brand h1 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: rgb(75, 200, 255);
+}
+
+/* SOCIALS */
+#logo-tiles {
+  height: 36.7px;
+  width: 120px;
+  margin-left: 5px;
+}
+
+#logo-soc {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 3px;
+}
+
+#logo-soc img {
+  width: 17px;
+  margin: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#logo-soc img:hover {
+  width: 25px;
+}
+
+/* MENU */
+/* md and up */
+@media (min-width: 768px) {
+  .menu-no-flex {
+    flex: none;
+  }
+}
+
+.nav-link.active {
+  font-weight: 500;
+}
+
+#navbarSupportedContent .rotate:hover {
+  animation-duration: 1s;
+  animation-name: rotate10;
+}
+
+#navbarSupportedContent .dropdown-item {
+  font-size: 120%;
+}
+
+/* sm and down */
+@media (max-width: 767.98px) {
+  #navbarSupportedContent a {
+    font-size: 0.9em;
+  }
+}
+
+/** ========== PROJECTS ========== */
+/** ===== BG-DEFAULT =====  */
+body#projects-bg-default {
+  background: url(/resources/img/profile-pic.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-img {
+  background: url(/resources/img/jumbotron.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#bg-time {
+  text-align: center;
+  text-shadow: rgb(255, 255, 255) 3px 3px 3px;
+  font-size: 80px;
+  padding-top: 10vh;
+}
+
+#weather {
+  height: 40vh;
+}
