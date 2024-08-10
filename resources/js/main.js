@@ -16,13 +16,66 @@ $(() => {
 });
 
 // global functions
-function scroll(id) {
-  for (let i = 0; i <= 1200; i += 100) {
-    setTimeout(() => {
-      window.scrollTo({
-        top: document.getElementById(id).offsetTop,
-        behavior: "smooth",
-      });
-    }, i);
+const main = {};
+
+main.goToElement = id => {
+  $(".cover").fadeIn();
+  setTimeout(() => main.scroll(id), 500);
+  setTimeout(() => $(".cover").fadeOut(), 1000);
+};
+
+main.intersect = (selector, threshold, cb) => {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: threshold,
+  };
+
+  function callback(entries) {
+    entries.forEach(entry => cb(entry));
   }
+
+  const observer = new IntersectionObserver(callback, options);
+
+  document
+    .querySelectorAll(selector)
+    .forEach(element => observer.observe(element));
+};
+
+main.intersectFadeInOut = (
+  selector,
+  threshold,
+  funcIf,
+  funcElse,
+  funcTimeout
+) => {
+  main.intersect(selector, threshold, entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      entry.target.classList.remove("default");
+      if (funcIf != undefined) funcIf(entry);
+    } else {
+      entry.target.classList.remove("active");
+      entry.target.classList.add("inactive");
+      if (funcElse != undefined) funcElse(entry);
+
+      // hide after .5s
+      setTimeout(() => {
+        entry.target.classList.remove("inactive");
+        entry.target.classList.add("default");
+        if (funcTimeout != undefined) funcTimeout(entry);
+      }, 500);
+    }
+  });
+};
+
+main.scroll = id => {
+  window.scrollTo({
+    top: document.querySelector(id).offsetTop,
+    behavior: "smooth",
+  });
+};
+
+function topButton() {
+  main.goToElement("body");
 }
