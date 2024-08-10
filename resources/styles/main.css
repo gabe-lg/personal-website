@@ -4,6 +4,20 @@ body {
   font-size: x-large;
 }
 
+.fixed {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  display: none;
+  background-size: cover;
+  z-index: 999;
+}
+
 /** FOOTER */
 footer {
   background-color: gray;
@@ -128,8 +142,7 @@ header {
 }
 
 #navbarSupportedContent .rotate:hover {
-  animation-duration: 1s;
-  animation-name: rotate10;
+  animation: rotate10 1s;
 }
 
 #navbarSupportedContent .dropdown-item {
