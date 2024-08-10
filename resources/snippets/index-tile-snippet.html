@@ -1,0 +1,27 @@
+<div id="fixed" class="fixed">
+  <div class="container">
+    <div id="tiles" class="align-items-center">
+      <div id="tiles-center">
+        <div class="display-6 my-4">
+          <span class="highlight">Learn more about me!&nbsp;</span>
+        </div>
+        <div id="home-tiles" class="row">
+          <div
+            class="col-md-4 
+                col-sm-{{ 6 + 6 * ($index === tiles.length - 1) }} 
+                col-xs-12 d-flex align-items-center justify-content-center mb-4"
+            ng-repeat="tile in tiles"
+          >
+            <a
+              id="{{ tile.toLowerCase() }}-tile"
+              class="tile-link d-flex align-items-center justify-content-center"
+              href="{{ tile.toLowerCase() }}"
+            >
+              <span class="highlight">{{ tile }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
