@@ -3,6 +3,7 @@
   <head></head>
   <body ng-app="IndexApp" style="display: none">
     <header></header>
+    <div class="cover fixed"></div>
     <div id="jumbotron">
       <div class="container">
         <h1 class="display-4 pb-3">
@@ -22,43 +23,42 @@
         <div class="py-4"></div>
         <p id="button">
           <a
-            class="btn btn-primary btn-lg"
+            class="btn btn-primary btn-lg mb-4"
+            onclick="jumbotronButtonScroll()"
+            role="button"
+          >
+            Scroll down &#128071;
+          </a>
+          <span class="mx-5"></span>
+          <a
+            class="btn btn-primary btn-lg mb-4"
             onclick="jumbotronButton()"
             role="button"
           >
-            Let's get started
+            Quick start &#128165;
           </a>
         </p>
         <div class="py-4"></div>
       </div>
     </div>
 
-    <div id="content">
-      <div id="cover"></div>
-      <div class="container" ng-controller="ContentController as cc">
-        <div id="tiles">
-          <div id="tiles-center">
-            <div class="display-6 my-4">
-              <span class="highlight">Learn more about me!&nbsp;</span>
-            </div>
-            <div id="home-tiles" class="row">
-              <div
-                class="col-md-4 
-                col-sm-{{ 6 + 6 * ($index === cc.tiles.length - 1) }} 
-                col-xs-12 d-flex align-items-center justify-content-center mb-4"
-                ng-repeat="tile in cc.tiles"
-              >
-                <a
-                  id="{{ tile.toLowerCase() }}-tile"
-                  class="tile-link d-flex align-items-center justify-content-center"
-                  href="{{ tile.toLowerCase() }}"
-                >
-                  <span class="highlight">{{ tile }}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div id="projects" class="default">
+      <div id="title" class="fixed align-items-center justify-content-center">
+        <h1>Discover my projects...</h1>
+      </div>
+    </div>
+
+    <div id="other" style="height: 100vh"></div>
+
+    <div ng-controller="ContentController as cc">
+      <div id="content" class="default">
+        <tile tiles="cc.tiles"></tile>
+      </div>
+
+      <div id="content-buffer"></div>
+
+      <div id="content" class="default">
+        <tile tiles="cc.tiles"></tile>
       </div>
     </div>
 

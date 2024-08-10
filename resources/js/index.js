@@ -1,25 +1,28 @@
 $(() => {
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.2,
-  };
-  function cb(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        $("#content #cover").hide();
-        scroll("content");
-      }
-    });
-  }
-  const observer = new IntersectionObserver(cb, options);
+  const index = {};
 
-  document
-    .querySelectorAll("#content")
-    .forEach(element => observer.observe(element));
+  main.intersectFadeInOut("#projects", 0.3);
+
+  main.intersect("#content-buffer", 0, entry => {
+    if (entry.isIntersecting) {
+      document
+        .querySelectorAll("#content")
+        .forEach(entry => entry.classList.add("active"));
+      document
+        .querySelectorAll("#content #fixed")
+        .forEach(entry => entry.classList.add("fixed"));
+    } else
+      document
+        .querySelectorAll("#content #fixed")
+        .forEach(entry => entry.classList.remove("fixed"));
+  });
 });
 
+// buttons
+function jumbotronButtonScroll() {
+  window.scrollBy(0, window.innerHeight / 3);
+}
+
 function jumbotronButton() {
-  scroll("content");
+  main.goToElement("#content");
 }
