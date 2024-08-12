@@ -1,3 +1,23 @@
+@keyframes slideup {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: 0 -100%;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    translate: 0 -100%;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
 @keyframes slidein {
   from {
     translate: 0 100vw;
