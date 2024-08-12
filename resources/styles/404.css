@@ -1,0 +1,48 @@
+body {
+  color: rgb(100, 0, 100);
+  height: 100vh;
+  background: url(/resources/img/pink-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+#content {
+  min-height: 75%;
+}
+
+#content > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#error {
+  font: 1.6em "Permanent Marker", cursive;
+  color: rgb(255, 60, 0);
+}
+
+#num {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+#thinking-emoji {
+  height: 1em;
+}
+
+.text {
+  font: 1.2em "Indie Flower", cursive;
+}
+
+/* xs only */
+@media (max-width: 575.98px) {
+  .text {
+    font-size: 4vw;
+  }
+}
+
+/* sm only */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .text {
+    font-size: 3vw;
+  }
+}
