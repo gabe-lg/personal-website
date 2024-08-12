@@ -36,11 +36,16 @@ body {
 
 #jumbotron p {
   font-size: 105%;
+  font-family: "Merienda", cursive;
 }
 
 #jumbotron p,
 #jumbotron h1 {
   animation: slidein 1s;
+}
+
+#jumbotron #button {
+  font-family: "Indie Flower", cursive;
 }
 
 /* sm and up */
