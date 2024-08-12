@@ -2,17 +2,37 @@ $(() => {
   $("head").load("/resources/snippets/head.html", () => {
     $("header").load("/resources/snippets/header.html", () => {
       $("footer").load("/resources/snippets/footer.html", () => {
-        $("body").fadeIn(500);
+        $(".header-menu").load(
+          "/resources/snippets/header-menu-snippet.html",
+          () => {
+            $(".header-menu-perm").load(
+              "/resources/snippets/header-menu-snippet.html",
+              () => $("body").fadeIn(500)
+            );
+          }
+        );
       });
     });
   });
 
+  if (!load[0]) load[0] = title.toLowerCase().replaceAll(" ", "-");
   if (!load[1]) $.getScript("/resources/js/" + load[0] + ".js");
   if (!load[2]) {
     $("body").append(
       '<link rel="stylesheet" href="/resources/styles/' + load[0] + '.css">'
     );
   }
+
+  main.intersect("header", 0, entry => {
+    const elem = document.getElementById("header-perm");
+    if (entry.isIntersecting) {
+      elem.classList.remove("show");
+      elem.classList.add("hide");
+    } else {
+      elem.classList.add("show");
+      elem.classList.remove("hide");
+    }
+  });
 });
 
 // global functions

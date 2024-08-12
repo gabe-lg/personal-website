@@ -81,6 +81,7 @@ header {
 .navbar-brand {
   font-family: "Playwrite US Modern", cursive;
 }
+
 .navbar-brand h1 {
   transition: all 0.5s ease-in-out;
 }
@@ -141,8 +142,11 @@ header {
   font-weight: 500;
 }
 
-#navbarSupportedContent .rotate:hover {
-  animation: rotate10 1s;
+/* md and up */
+@media (min-width: 768px) {
+  #navbarSupportedContent .rotate:hover {
+    animation: rotate10 1s;
+  }
 }
 
 #navbarSupportedContent .dropdown-item {
@@ -154,6 +158,25 @@ header {
   #navbarSupportedContent a {
     font-size: 0.9em;
   }
+}
+
+#header-perm {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  background-color: rgba(255, 182, 122, 0.9);
+}
+
+#header-perm.show {
+  animation: slidedown 0.3s forwards;
+}
+
+#header-perm.hide {
+  animation: slideup 0.3s forwards;
+}
+
+#logo-perm {
+  width: 120px;
 }
 
 /** ========== PROJECTS ========== */
