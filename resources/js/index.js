@@ -44,5 +44,5 @@ function jumbotronButtonScroll() {
 }
 
 function jumbotronButton() {
-  main.goToElement("#content");
+  main.goToElement("#content-buffer");
 }
