@@ -2,12 +2,17 @@ $(() => {
   $("head").load("/resources/snippets/head.html", () => {
     $("header").load("/resources/snippets/header.html", () => {
       $("footer").load("/resources/snippets/footer.html", () => {
-        $(".header-menu").load(
-          "/resources/snippets/header-menu-snippet.html",
+        $("#header-perm").load(
+          "/resources/snippets/header-perm-snippet.html",
           () => {
-            $(".header-menu-perm").load(
+            $(".header-menu").load(
               "/resources/snippets/header-menu-snippet.html",
-              () => $("body").fadeIn(500)
+              () => {
+                $(".header-menu-perm").load(
+                  "/resources/snippets/header-menu-snippet.html",
+                  () => $("body").fadeIn(500)
+                );
+              }
             );
           }
         );
