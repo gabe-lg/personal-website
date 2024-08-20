@@ -42,7 +42,7 @@
 }
 
 @keyframes rotate10 {
-  25% {
+  33% {
     transform: rotate(-10deg);
   }
 
@@ -50,7 +50,7 @@
     transform: rotate(0);
   }
 
-  75% {
+  67% {
     transform: rotate(10deg);
   }
 }
