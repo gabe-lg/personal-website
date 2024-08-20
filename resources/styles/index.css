@@ -1,7 +1,6 @@
 body {
   background-color: pink;
   color: blueviolet;
-  font-family: "Caveat", cursive;
 }
 
 .cover {
@@ -32,6 +31,7 @@ body {
 #jumbotron h1 > .highlight {
   background-color: rgb(255, 215, 220);
   font-size: 115%;
+  font-family: "Caveat", cursive;
 }
 
 #jumbotron p {
@@ -63,14 +63,47 @@ body {
   }
 }
 
+/* sm only */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #jumbotron p {
+    font-size: 90%;
+  }
+}
+
 /* xs only */
 @media (max-width: 575.98px) {
   #jumbotron p {
-    font-size: 5vw;
+    font-size: 3.5vw;
   }
   #jumbotron #button a {
     font-size: 4vw;
   }
+}
+
+/* ABOUT */ /* xs only */
+@media (max-width: 575.98px) {
+  #about #profile-pic-container {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+#about #profile-pic {
+  border-radius: 50%;
+  width: 120px;
+}
+
+#about #self-intro {
+  font-family: "Lora", serif;
+}
+
+#about #self-intro .highlight {
+  color: rgb(185, 155, 0);
+  transition: all 0.5s ease-in-out;
+}
+
+#about #self-intro .highlight:hover {
+  color: rgb(200, 0, 200);
 }
 
 /* PROJECTS */
@@ -106,14 +139,34 @@ body {
   padding: 10px;
 }
 
+/* CONTACTS */
+#contacts {
+  height: 100vh;
+}
+
+#contacts > div {
+  display: none;
+}
+
+#contacts.active > div {
+  display: block;
+  animation: slidein 1s;
+}
+
+#contacts #icon {
+  height: 30px;
+  display: block;
+}
+
 /* TILES */
 #content,
 #content-buffer,
 #content-buffer-upper {
-  background: url(/resources/img/quickstart-bg.gif) center no-repeat;
+  background: url(/resources/img/pink-bg.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  font-family: "Caveat", cursive;
 }
 
 #content-buffer {

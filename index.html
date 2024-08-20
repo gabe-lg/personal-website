@@ -31,7 +31,8 @@
           >
             Scroll down &#128071;
           </a>
-          <span class="mx-5"></span>
+          <span class="mx-3 d-inline-block d-sm-none"></span>
+          <span class="mx-5 d-none d-sm-inline-block"></span>
           <a
             class="btn btn-primary btn-lg mb-4"
             onclick="jumbotronButton()"
@@ -44,6 +45,84 @@
       </div>
     </div>
 
+    <div id="about" class="bg-dark text-white-50 text-center">
+      <div class="container">
+        <div class="py-5"></div>
+        <div class="row">
+          <div class="col-8 mx-auto mb-5">
+            <h5 class="text-danger fw-bold text-uppercase">Welcome!</h5>
+            <div class="text-light fw-bold lead pb-3">
+              Here&rsquo;s a little bit about myself&hellip;
+            </div>
+            <div id="profile-pic-container">
+              <img
+                id="profile-pic"
+                class="float-start m-3"
+                src="/resources/img/profile-pic.jpg"
+                alt="Profile picture"
+              />
+            </div>
+            <div id="self-intro" class="text-start">
+              I&rsquo;m a sophomore studying computer science in Cornell
+              University. With my
+              <span class="highlight">strong work ethic</span> and experience in
+              <span class="highlight">Python</span> and
+              <span class="highlight">Java</span>, I&rsquo;m committed to
+              delivering <span class="highlight">well-tested code.</span>
+            </div>
+          </div>
+
+          <div class="col-12 mb-3">
+            <h5 class="text-danger fw-bold text-uppercase">Skills</h5>
+            <div class="text-light fw-bold lead pb-3">
+              These are what I&rsquo;ve been learning in the past few years
+              &#128071;
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12 mb-5">
+            <h3>Languages:</h3>
+            <img
+              src="https://skillicons.dev/icons?i=java,py,js,c,cs,cpp&theme=light&perline=3"
+              title="Java, Python, JavaScript, C, C#, C++"
+            />
+          </div>
+
+          <div class="col-md-8 col-sm-12 mb-5">
+            <h3>Frontend dev:</h3>
+            <img
+              src="https://go-skill-icons.vercel.app/api/icons?i=html,css,markdown,angular,jquery,bootstrap,django,flask,githubpages&theme=light&perline=5"
+              title="HTML, CSS, Markdown, AngularJS, JQuery, Bootstrap, Django, Flask, GitHub Pages"
+            />
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12 mb-5">
+            <h3>Data manipulation:</h3>
+            <img
+              src="https://go-skill-icons.vercel.app/api/icons?i=numpy,matplotlib,mysql,git,anaconda,regex&theme=light&perline=3"
+              title="NumPy, Matplotlib, MySQL, Git, Anaconda, Regex"
+            />
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12 mb-5">
+            <h3>Tools:</h3>
+            <img
+              src="https://skillicons.dev/icons?i=vscode,idea,pycharm&theme=light&perline=3"
+              title="VS Code, IntelliJ IDEA, PyCharm"
+            />
+          </div>
+
+          <div class="col-md-4 col-sm-12 mb-5">
+            <h3>Others:</h3>
+            <img
+              src="https://skillicons.dev/icons?i=linux,ubuntu,bash,latex,github,githubactions,discord,bots&theme=light&perline=3"
+              title="Linux, Ubuntu, Bash, LATEX, GitHub, GitHub actions, Discord, Discord bots"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="projects" class="default">
       <div id="title" class="fixed align-items-center justify-content-center">
         <h1>Discover my projects...</h1>
@@ -51,6 +130,16 @@
     </div>
 
     <div id="other" style="height: 100vh"></div>
+
+    <div
+      id="contacts"
+      class="bg-light d-flex align-items-center"
+      ng-controller="ContactsController as csc"
+    >
+      <div class="container">
+        <contact contacts="csc.contacts"></contact>
+      </div>
+    </div>
 
     <div ng-controller="ContentController as cc">
       <div id="content" class="default">
