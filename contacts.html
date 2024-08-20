@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+
+  <body style="display: none" ng-app="IndexApp">
+    <nav
+      id="header-perm"
+      class="navbar navbar-expand-md navbar-light hide"
+      style="font-family: 'Caveat', cursive"
+    ></nav>
+
+    <header class="d-none"></header>
+
+    <div
+      id="contacts"
+      class="bg-light d-flex align-items-center"
+      ng-controller="ContactsController as csc"
+    >
+      <div class="container">
+        <contact contacts="csc.contacts"></contact>
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+      const title = "Contacts";
+      const load = ["index"];
+    </script>
+    <script src="/resources/js/main.js"></script>
+    <script src="/resources/js/indexApp.js"></script>
+  </body>
+</html>

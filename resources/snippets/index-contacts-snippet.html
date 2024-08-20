@@ -1,0 +1,21 @@
+<div class="text-center text-dark fw-bold lead py-3">
+  <h5 class="text-danger fw-bold text-uppercase">Contacts &amp; more</h5>
+  I&rsquo;d love to connect with you!
+</div>
+<div class="row text-center">
+  <div class="col-lg-2 col-sm-4 col-6 mb-4" ng-repeat="contact in contacts">
+    <a href="{{ contact.link }}" class="text-decoration-none" target="_blank">
+      <div class="d-flex justify-content-center">
+        <img
+          id="icon"
+          class="mb-2"
+          src="/resources/img/icons/{{ contact.name }}.png"
+          alt="{{ contact.name }} icon"
+        />
+      </div>
+      <div id="{{ contact.name }}-content" class="text-dark lead">
+        {{ contact.content }}
+      </div>
+    </a>
+  </div>
+</div>
