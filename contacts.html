@@ -11,13 +11,19 @@
 
     <header class="d-none"></header>
 
-    <div
-      id="contacts"
-      class="bg-light d-flex align-items-center"
-      ng-controller="ContactsController as csc"
-    >
-      <div class="container">
+    <div id="contacts" class="bg-light">
+      <div class="container" ng-controller="ContactsController as csc">
+        <div style="height: 30vh"></div>
         <contact contacts="csc.contacts"></contact>
+        <div ng-controller="ResumeController as rc">
+          <resume
+            show="rc.show"
+            button="rc.button"
+            on-click="rc.onClick"
+            style="animation: slideup 1s"
+          ></resume>
+          <div class="py-5"></div>
+        </div>
       </div>
     </div>
 

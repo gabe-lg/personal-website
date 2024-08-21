@@ -141,7 +141,7 @@ body {
 
 /* CONTACTS */
 #contacts {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #contacts > div {

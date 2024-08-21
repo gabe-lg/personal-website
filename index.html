@@ -45,7 +45,11 @@
       </div>
     </div>
 
-    <div id="about" class="bg-dark text-white-50 text-center">
+    <div
+      id="about"
+      class="bg-dark text-white-50 text-center"
+      ng-controller="ResumeController as rc"
+    >
       <div class="container">
         <div class="py-5"></div>
         <div class="row">
@@ -120,6 +124,14 @@
             />
           </div>
         </div>
+
+        <resume
+          show="rc.show"
+          button="rc.button"
+          on-click="rc.onClick"
+          style="animation: slideup 1s"
+        ></resume>
+        <div class="py-5"></div>
       </div>
     </div>
 

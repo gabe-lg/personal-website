@@ -3,10 +3,24 @@
 
   angular
     .module("IndexApp", [])
+    .controller("ResumeController", ResumeController)
     .controller("ContactsController", ContactsController)
     .controller("ContentController", ContentController)
+    .directive("resume", ResumeDirective)
     .directive("contact", ContactDirective)
     .directive("tile", TileDirective);
+
+  function ResumeController() {
+    const rc = this;
+
+    rc.show = false;
+    rc.button = "Show resume";
+    rc.onClick = () => {
+      rc.show = !rc.show;
+      rc.button = rc.show ? "Hide resume" : "Show resume";
+      console.log("onclick");
+    };
+  }
 
   function ContactsController() {
     const csc = this;
@@ -43,6 +57,13 @@
     const cc = this;
 
     cc.tiles = ["Projects", "Music", "Travels"];
+  }
+
+  function ResumeDirective() {
+    return {
+      templateUrl: "/resources/snippets/index-resume-snippet.html",
+      scope: { show: "<", button: "<", onClick: "<" },
+    };
   }
 
   function ContactDirective() {
