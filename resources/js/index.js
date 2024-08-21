@@ -28,7 +28,7 @@ index.updateTime = () => {
   const now = new Date();
   const options = {
     timeZone: "America/New_York",
-    hour: "2-digit",
+    hour: "numeric",
     minute: "2-digit",
     second: "2-digit",
   };
