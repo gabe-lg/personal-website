@@ -11,27 +11,27 @@
   function ContactsController() {
     const csc = this;
 
-    csc.contactObject = function (name, content, link) {
+    csc.ContactObject = function (name, content, link) {
       this.name = name;
       this.content = content;
       this.link = link;
     };
 
     csc.contacts = [
-      new csc.contactObject("location", "Ithaca, NY"),
-      new csc.contactObject("time"),
-      new csc.contactObject(
+      new csc.ContactObject("location", "Ithaca, NY"),
+      new csc.ContactObject("time"),
+      new csc.ContactObject(
         "linkedin",
         "gabriel-lg",
         "https://linkedin.com/in/gabriel-lg"
       ),
-      new csc.contactObject(
+      new csc.ContactObject(
         "instagram",
-        "hey.its.gabe",
+        "hey.its.gabee",
         "https://instagram.com/hey.its.gabee"
       ),
-      new csc.contactObject("github", "gabe-lg", "https://github.com/gabe-lg"),
-      new csc.contactObject(
+      new csc.ContactObject("github", "gabe-lg", "https://github.com/gabe-lg"),
+      new csc.ContactObject(
         "email",
         "mail@gabriel-lg.com",
         "mailto:mail@gabriel-lg.com"
