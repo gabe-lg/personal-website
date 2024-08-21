@@ -18,34 +18,33 @@
     rc.onClick = () => {
       rc.show = !rc.show;
       rc.button = rc.show ? "Hide resume" : "Show resume";
-      console.log("onclick");
     };
   }
 
   function ContactsController() {
     const csc = this;
 
-    csc.ContactObject = function (name, content, link) {
+    csc.Contact = function (name, content, link) {
       this.name = name;
       this.content = content;
       this.link = link;
     };
 
     csc.contacts = [
-      new csc.ContactObject("location", "Ithaca, NY"),
-      new csc.ContactObject("time"),
-      new csc.ContactObject(
+      new csc.Contact("location", "Ithaca, NY"),
+      new csc.Contact("time"),
+      new csc.Contact(
         "linkedin",
         "gabriel-lg",
         "https://linkedin.com/in/gabriel-lg"
       ),
-      new csc.ContactObject(
+      new csc.Contact(
         "instagram",
         "hey.its.gabee",
         "https://instagram.com/hey.its.gabee"
       ),
-      new csc.ContactObject("github", "gabe-lg", "https://github.com/gabe-lg"),
-      new csc.ContactObject(
+      new csc.Contact("github", "gabe-lg", "https://github.com/gabe-lg"),
+      new csc.Contact(
         "email",
         "mail@gabriel-lg.com",
         "mailto:mail@gabriel-lg.com"
