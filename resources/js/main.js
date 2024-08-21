@@ -1,24 +1,5 @@
 $(() => {
-  $("head").load("/resources/snippets/head.html", () => {
-    $("header").load("/resources/snippets/header.html", () => {
-      $("footer").load("/resources/snippets/footer.html", () => {
-        $("#header-perm").load(
-          "/resources/snippets/header-perm-snippet.html",
-          () => {
-            $(".header-menu").load(
-              "/resources/snippets/header-menu-snippet.html",
-              () => {
-                $(".header-menu-perm").load(
-                  "/resources/snippets/header-menu-snippet.html",
-                  () => $("body").fadeIn(500)
-                );
-              }
-            );
-          }
-        );
-      });
-    });
-  });
+  main.loadAllResources();
 
   if (!load[0]) load[0] = title.toLowerCase().replaceAll(" ", "-");
   if (!load[1]) $.getScript("/resources/js/" + load[0] + ".js");
