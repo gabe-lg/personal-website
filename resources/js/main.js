@@ -26,6 +26,9 @@ $(() => {
 /* GLOBAL FUNCTIONS */
 const main = {};
 
+main.copyrightText =
+  "\u00A9 2024 Gabriel Leung. All rights reserved.<br>This work is protected by copyright law. Permission is explicitly not granted to any individual or entity, except the copyright holder, to utilize, modify, or distribute this software and its accompanying documentation files without explicit written consent from the copyright holder.";
+
 /**
  * Shows the cover image if the html page provides one, scrolls to the first
  *  element corresponding to `selector`, then hides the cover.
@@ -100,6 +103,67 @@ main.intersectFadeInOut = (
       }, 500);
     }
   });
+};
+
+main.loadResource = (selector, url) => {
+  return new Promise((resolve, reject) => {
+    $(selector).load(url, (_, status) => {
+      if (status === "error") {
+        reject(new Error(`Failed to load ${url}`));
+      } else {
+        resolve();
+      }
+    });
+  });
+};
+
+main.loadAllResources = async () => {
+  try {
+    await main.loadResource("head", "/resources/snippets/head.html");
+    await main.loadResource("header", "/resources/snippets/header.html");
+    await main.loadResource("footer", "/resources/snippets/footer.html");
+    await main.loadResource(
+      "#header-perm",
+      "/resources/snippets/header-perm-snippet.html"
+    );
+    await main.loadResource(
+      ".header-menu",
+      "/resources/snippets/header-menu-snippet.html"
+    );
+    await main.loadResource(
+      ".header-menu-perm",
+      "/resources/snippets/header-menu-snippet.html"
+    );
+    $("#copyright").html(main.copyrightText);
+    $("body").fadeIn(500);
+    main.logWelcomeText();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+main.logWelcomeText = () => {
+  const ascii = `
+ __      __          ___                                      __     
+/\\ \\  __/\\ \\        /\\_ \\                                    /\\ \\    
+\\ \\ \\/\\ \\ \\ \\     __\\//\\ \\     ___    ___     ___ ___      __\\ \\ \\   
+ \\ \\ \\ \\ \\ \\ \\  /'__\`\\\\ \\ \\   /'___\\ / __\`\\ /' __\` __\`\\  /'__\`\\ \\ \\  
+  \\ \\ \\_/ \\_\\ \\/\\  __/ \\_\\ \\_/\\ \\__//\\ \\L\\ \\/\\ \\/\\ \\/\\ \\/\\  __/\\ \\_\\ 
+   \\ \`\\___x___/\\ \\____\\/\\____\\ \\____\\ \\____/\\ \\_\\ \\_\\ \\_\\ \\____\\\\/\\_\\
+    '\\/__//__/  \\/____/\\/____/\\/____/\\/___/  \\/_/\\/_/\\/_/\\/____/ \\/_/
+`;
+  console.log(
+    "%c" +
+      ascii +
+      "\n%cHi devs, thanks for visiting my site!\nFind the source code at " +
+      "https://github.com/gabe-lg/personal-website. \n\n" +
+      "%cCopyright notice:\n%c" +
+      main.copyrightText.replace("<br>", "\n"),
+    "font-weight: bold",
+    "font-size: 16px",
+    "font-weight: bold; font-size: 20px",
+    "font-size: 16px"
+  );
 };
 
 /**
