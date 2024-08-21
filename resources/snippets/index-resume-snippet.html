@@ -1,0 +1,22 @@
+<div class="text-center">
+  <h5 class="text-danger fw-bold text-uppercase mb-3">My resume</h5>
+  <div class="mb-3">
+    <a
+      href="https://drive.google.com/file/d/1pPOle0yLpguXri1u1KqI0-p5frpz3sHE"
+      class="btn btn-warning"
+      target="_blank"
+    >
+      Download my resume
+    </a>
+  </div>
+  <div class="mb-3">
+    <button type="button" class="btn btn-warning" ng-click="onClick()">
+      {{ button }}
+    </button>
+  </div>
+  <iframe
+    src="https://drive.google.com/file/d/1pPOle0yLpguXri1u1KqI0-p5frpz3sHE/preview"
+    ng-if="show"
+    style="width: 80vw; height: 104vw"
+  ></iframe>
+</div>
