@@ -31,8 +31,16 @@
     };
 
     csc.contacts = [
-      new csc.Contact("location", "Ithaca, NY"),
-      new csc.Contact("time"),
+      new csc.Contact(
+        "location",
+        "Ithaca, NY",
+        "https://cityofithaca.org/"
+      ),
+      new csc.Contact(
+        "time",
+        "",
+        "https://timeanddate.com/worldclock/@5122440"
+      ),
       new csc.Contact(
         "linkedin",
         "gabriel-lg",
