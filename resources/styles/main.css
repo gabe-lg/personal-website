@@ -20,6 +20,23 @@ body {
   z-index: 999;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hidden.left-right {
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show.left-right {
+  transform: translateX(0);
+}
+
 /** FOOTER */
 footer {
   background-color: gray;
@@ -29,16 +46,8 @@ footer {
   font-size: smaller;
 }
 
-@media (display-mode: fullscreen) {
-  .fs-inv {
-    display: none;
-  }
-}
-
-@media not (display-mode: fullscreen) {
-  .fs-vs {
-    display: none;
-  }
+footer #copyright {
+  font-size: 10px;
 }
 
 /** HEADER */
@@ -167,6 +176,7 @@ header {
   top: 0%;
   width: 100%;
   background-color: rgba(255, 182, 122, 0.9);
+  z-index: 999;
 }
 
 #header-perm.show {
@@ -179,29 +189,4 @@ header {
 
 #logo-perm {
   width: 120px;
-}
-
-/** ========== PROJECTS ========== */
-/** ===== BG-DEFAULT =====  */
-body#projects-bg-default {
-  background: url(/resources/img/profile-pic.jpg) center no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
-.bg-img {
-  background: url(/resources/img/jumbotron.jpg) center no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
-#bg-time {
-  text-align: center;
-  text-shadow: rgb(255, 255, 255) 3px 3px 3px;
-  font-size: 80px;
-  padding-top: 10vh;
-}
-
-#weather {
-  height: 40vh;
 }

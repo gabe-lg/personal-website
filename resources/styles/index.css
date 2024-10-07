@@ -119,20 +119,6 @@ body {
   font-family: "Pacifico", cursive;
 }
 
-#projects.default #title {
-  display: none;
-}
-
-#projects.active #title {
-  animation: fadeIn 0.5s;
-  display: grid;
-}
-
-#projects.inactive #title {
-  animation: fadeOut 0.5s forwards;
-  display: grid;
-}
-
 #projects h1 {
   background-color: antiquewhite;
   border-radius: 50px;
@@ -145,47 +131,27 @@ body {
 }
 
 #contacts > div {
-  display: none;
-}
-
-#contacts.active > div {
-  display: block;
   animation: slidein 1s;
 }
 
 #contacts #icon {
   height: 30px;
-  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+#contacts a:hover {
+  #icon {
+    transform: scale(1.25);
+  }
 }
 
 /* TILES */
-#content,
-#content-buffer,
-#content-buffer-upper {
+#content {
   background: url(/resources/img/pink-bg.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
   font-family: "Caveat", cursive;
-}
-
-#content-buffer {
-  height: 40vh;
-}
-
-#content #fixed {
-  display: none;
-  transition: all 0.5s ease-in-out;
-}
-
-#content.active #fixed {
-  animation: slidein 1s;
-  display: block;
-}
-
-#content.inactive #fixed {
-  animation: fadeOut 0.5s;
-  display: block;
 }
 
 #content #tiles {

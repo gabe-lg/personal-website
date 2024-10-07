@@ -87,8 +87,8 @@
           <div class="col-md-4 col-sm-12 mb-5">
             <h3>Languages:</h3>
             <img
-              src="https://skillicons.dev/icons?i=java,py,js,c,cs,cpp&theme=light&perline=3"
-              title="Java, Python, JavaScript, C, C#, C++"
+              src="https://skillicons.dev/icons?i=java,py,js,c,cs,cpp,ocaml&theme=light&perline=4"
+              title="Java, Python, JavaScript, C, C#, C++, OCaml"
             />
           </div>
 
@@ -135,8 +135,8 @@
       </div>
     </div>
 
-    <div id="projects" class="default">
-      <div id="title" class="fixed align-items-center justify-content-center">
+    <div id="projects">
+      <div id="title" class="align-items-center justify-content-center">
         <h1>Discover my projects...</h1>
       </div>
     </div>
@@ -148,20 +148,16 @@
       class="bg-light d-flex align-items-center"
       ng-controller="ContactsController as csc"
     >
-      <div class="container">
+      <div class="hidden left-right container">
         <contact contacts="csc.contacts"></contact>
       </div>
     </div>
 
     <div ng-controller="ContentController as cc">
-      <div id="content" class="default">
-        <tile tiles="cc.tiles"></tile>
-      </div>
-
-      <div id="content-buffer"></div>
-
-      <div id="content" class="default">
-        <tile tiles="cc.tiles"></tile>
+      <div id="content" class="d-grid align-items-center">
+        <div class="hidden left-right">
+          <tile tiles="cc.tiles"></tile>
+        </div>
       </div>
     </div>
 

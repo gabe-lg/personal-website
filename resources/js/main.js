@@ -27,7 +27,11 @@ $(() => {
 const main = {};
 
 main.copyrightText =
-  "\u00A9 2024 Gabriel Leung. All rights reserved.<br>This work is protected by copyright law. Permission is explicitly not granted to any individual or entity, except the copyright holder, to utilize, modify, or distribute this software and its accompanying documentation files without explicit written consent from the copyright holder.";
+  "\u00A9 2024 Gabriel Leung. All rights reserved.<br>This work is protected" +
+  " by copyright law. Permission is explicitly not granted to any individual" +
+  " or entity, except the copyright holder, to utilize, modify, or" +
+  " distribute this software and its accompanying documentation files" +
+  " without explicit written consent from the copyright holder.";
 
 /**
  * Shows the cover image if the html page provides one, scrolls to the first
@@ -54,7 +58,7 @@ main.intersect = (selector, threshold, cb) => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: threshold,
+    threshold,
   };
 
   function callback(entries) {
@@ -66,43 +70,6 @@ main.intersect = (selector, threshold, cb) => {
   document
     .querySelectorAll(selector)
     .forEach(element => observer.observe(element));
-};
-
-/**
- * A more complex function that sets up a new IntersectionObserver (see
- *  main.intersect).
- *
- * @param {string} selector
- * @param {number} threshold
- * @param {Function} funcIf Optional
- * @param {Function} funcElse Optional
- * @param {Function} funcTimeout Optional
- */
-main.intersectFadeInOut = (
-  selector,
-  threshold,
-  funcIf,
-  funcElse,
-  funcTimeout
-) => {
-  main.intersect(selector, threshold, entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-      entry.target.classList.remove("default");
-      if (funcIf != undefined) funcIf(entry);
-    } else {
-      entry.target.classList.remove("active");
-      entry.target.classList.add("inactive");
-      if (funcElse != undefined) funcElse(entry);
-
-      // hide after .5s
-      setTimeout(() => {
-        entry.target.classList.remove("inactive");
-        entry.target.classList.add("default");
-        if (funcTimeout != undefined) funcTimeout(entry);
-      }, 500);
-    }
-  });
 };
 
 main.loadResource = (selector, url) => {

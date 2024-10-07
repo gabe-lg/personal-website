@@ -1,23 +1,9 @@
 $(() => {
-  main.intersectFadeInOut("#projects", 0.3);
-
-  main.intersect("#content-buffer", 0, entry => {
+  main.intersect(".hidden", 0, entry => {
     if (entry.isIntersecting) {
-      document
-        .querySelectorAll("#content")
-        .forEach(entry => entry.classList.add("active"));
-      document
-        .querySelectorAll("#content #fixed")
-        .forEach(entry => entry.classList.add("fixed"));
-    } else
-      document
-        .querySelectorAll("#content #fixed")
-        .forEach(entry => entry.classList.remove("fixed"));
-  });
-
-  main.intersect("#contacts", 0.3, entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
     }
   });
 });
@@ -44,5 +30,5 @@ function jumbotronButtonScroll() {
 }
 
 function jumbotronButton() {
-  main.goToElement("#content-buffer");
+  main.goToElement("#content");
 }
